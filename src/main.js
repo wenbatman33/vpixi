@@ -1,23 +1,9 @@
-// eslint-disable-next-line no-unused-vars
-import PIXI from 'pixi';
-import App from './App';
-import load from './load';
-import sprite from './sprite';
+import * as PIXI from 'pixi.js';
 
-const Hook = {
-  async create() {
-    const app = new App('body');
-    await load();
-    return app;
-  },
-  async mounted() {
-    const x = sprite({ name: 'bg' });
-    this.stage.addChild(x);
-  },
-};
-const init = async () => {
-  const app = Hook.create();
-  await Hook.mounted.call(app);
-};
-
-window.onload = init();
+const app = new PIXI.Application();
+document.body.appendChild(app.view);
+const container = new PIXI.Container();
+const texture = PIXI.Texture.from('/static/bunny.png');
+const bunny = new PIXI.Sprite(texture);
+container.addChild(bunny);
+app.stage.addChild(container);
