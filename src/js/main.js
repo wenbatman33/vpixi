@@ -1,3 +1,4 @@
+
 const app = new PIXI.Application({ autoStart: false, antialias: true });
 document.body.appendChild(app.view);
 app.stage = new PIXI.display.Stage();
