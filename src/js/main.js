@@ -1,7 +1,3 @@
-import 'pixi.js'
-globalThis.PIXI = PIXI;
-window.PIXI = PIXI;
-
 const app = new PIXI.Application({ autoStart: false, antialias: true });
 document.body.appendChild(app.view);
 app.stage = new PIXI.display.Stage();
@@ -32,7 +28,7 @@ camera.addChild(new PIXI.display.Layer(cardsGroup));
 // we could also add layers in the stage, but then we'll need extra layer for the text
 
 // load assets
-loader.add('cards', '/assets/js/cards.json');
+loader.add('cards', '/assets/img/cards.json');
 loader.add('table', '/assets/img/table.png');
 loader.load(onAssetsLoaded);
 
