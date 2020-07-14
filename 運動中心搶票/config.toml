@@ -1,0 +1,12 @@
+sid="your sid here"
+
+[[tasks]]
+place="place id"
+gameTime=8
+gameDate="2020/07/07"
+
+# more tasks
+# [[tasks]]
+# place="place id"
+# gameTime=8
+# gameDate="2020/07/07"
