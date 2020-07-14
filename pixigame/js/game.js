@@ -1210,3 +1210,23 @@
         });
     }
 })(window, document);
+
+
+//game.replay();//重新开始
+//game.play();//继续
+//game.pause();//暂停
+
+game.onPlay = function(){
+    console.log('游戏开始, 重新开始和继续游戏也会调用');
+}
+game.onEnd = function(){
+    console.log('游戏结束，指走到了最后: score=' + this.score);
+}
+game.onBreak = function(){
+    console.log('碰到障碍物');
+}
+game.load();
+
+game.init('game_stage', function(){
+    console.log('游戏加载完成');
+});
